@@ -1,0 +1,63 @@
+---
+title       : Daily Horoscope 
+subtitle    : Data Application course project
+author      : Hindrek Jermann
+job         : database developer
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+---
+
+## What is the Daily Horoscope?
+
+1. It is a small game, to predict upcoming days influence using numerology.
+2. Idea was taken from Estonian newspaper "Ohtuleht", at 19th of November 2015
+3. At least one interested user - my wife!
+
+--- .class #id 
+
+## How to use application?
+1. User must select ones birthday
+2. User must select date for prediction
+3. User must press the "Update View" button, to get calculated result.
+
+--- 
+
+## Application parameters
+Excample data
+- Birthday: 1971-09-19
+- Date for prediction: 2015-11-22
+
+---
+
+## Daily number calculation:
+Data used in calculation process:
+- Month of birthday: 09 -> 0+9 = 9
+- Day of birthday: 19 -> 1+9 = 10 -> 1+0 = 1
+- Day of prediction date: 22 -> 2+2 = 4
+- Month of predicion date: 11 -> 1+1 = 2
+- Year of prdiction date: 2015 -> 2+0+1+5 = 8
+- Day number: 9+1+4+2+8 =24 -> 2+4 = 6 
+
+--- 
+
+## Application functions
+```{r}
+yn(2015)
+snr(19)
+dh('1971-09-19','2015-11-22')
+
+```
+
+--- 
+
+## Used materials
+- http://www.google.com
+- http://www.whats-your-sign.com/todays-numbers.html
+- http://shiny.rstudio.com/
+- http://slidify.org/
+- Coursera video materials
